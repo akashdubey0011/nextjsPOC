@@ -3,11 +3,11 @@ import Nav from "./Nav";
 
 const rest = () => {
     const options = ['Done', 'Pending']
-    const [getdata, setData] = useState('');
-    const [check, setCheck] = useState(null);
+    const [getdata, setData] = useState<any>('');
+    const [check, setCheck] = useState<any>(null);
     const [fetchData, setfetchData] = useState([]);
     const [flag, setFlag] = useState(false);
-    const [getindex, setIndex] = useState(null);
+    const [getindex, setIndex] = useState<null|number>(null);
     const [disablebtn, setDisablebtn] = useState(true);
 
     let complete: boolean|string = '';
@@ -81,7 +81,7 @@ const rest = () => {
         console.log("fetched all the data from api", res)
     }
 
-    const deleteApi =async(id) => {
+    const deleteApi =async(id:number) => {
         console.log("delete id", id)
         const res = await fetch(`api/todo/${id}`, {
             method: 'DELETE'
@@ -95,11 +95,11 @@ const rest = () => {
     const updateApi =async(id:any,index:any) => {
         console.log(index);
         console.log(fetchData);
-        const getdata = fetchData.find(elem => elem.id == parseInt(id));
+        const getdata = fetchData.find((elem:any) => elem.id == parseInt(id)) as any;
         console.log(getdata)
         setData(getdata.text);
         setFlag(true)
-        setIndex(id)
+        setIndex(id) 
         console.log("flag update api", flag)
         // const res = await fetch(`api/todo/${id}`, {
         //     method: 'UPDATE',

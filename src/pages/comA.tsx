@@ -1,12 +1,11 @@
 'use-client'
-import { createContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import Nav from "./Nav";
 import ComB from "./comB";
 import Link from "next/link";
-export const MyContext = createContext();
 const comA = () => {
-    const [getname, setName] = useState();
-    const [getNames, setNames] = useState([]);
+    const [getname, setName] = useState<any>();
+    const [getNames, setNames] = useState<any>([]);
     const [update, setupdate] = useState(false);
     const [getindex, setIndex] = useState<any>(null);
 
@@ -24,7 +23,7 @@ const comA = () => {
         } else {
             console.log(getNames[getindex]);
             console.log(getname)
-            setNames(prevData => prevData.map((elem, i) => i == getindex ? getname : elem));
+            setNames((prevData:any) => prevData.map((elem:any, i:number) => i == getindex ? getname : elem));
             setupdate(false);
             setIndex(null);
             // setNames(getNames[getindex] = getname)
@@ -53,7 +52,7 @@ const comA = () => {
         <button className="px-2 py-1 rounded m-2 bg-[blue] text-white" onClick={showData}>submit</button>
         <div className="table">
             {getNames.length != 0 ?  
-                getNames.map((elem, i) => {
+                getNames.map((elem:any, i:number) => {
                     return (
                         <>
                         <div className="ml-5">

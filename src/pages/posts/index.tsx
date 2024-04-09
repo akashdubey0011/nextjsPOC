@@ -12,8 +12,8 @@ const index = ({posts}:any) => {
   const npage = Math.ceil(posts.length / recordPerPage);
 
 //   const numbers = [...Array(npage)]; 
-    const numbers = [];
-    [...Array(npage)].map((elem, i) => {
+    const numbers: number[] = [];
+    [...Array(npage)].map((elem, i:number) => {
         numbers.push(i+1)
     })
   

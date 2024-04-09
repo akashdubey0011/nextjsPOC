@@ -1,4 +1,4 @@
-
+import React from 'react';
 const Getpost = ({detailpage, category}:any) => {
 
     console.log(detailpage, category)
