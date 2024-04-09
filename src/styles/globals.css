@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: 'league_spartan';
+}
+
+body,main {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('../../public/asset/font/Inter/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../../public/asset/font/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'league_spartan';
+  src: url('../../public/asset/font/League_spartan/LeagueSpartan-Regular.ttf');
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  padding: 20px;
+  background: gray;
+  color: White;
+  text-align: center;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.pageContent {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: gray;
+  color: white;
+}
+
+.list_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list_items li {
+  margin: 0 20px;
+}
+
+.common_header {
+  color: #000;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.common_para {
+  color: #697586;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  margin-bottom: 32px;
+}
+
+/* definition list */
+.definition_list {
+  list-style-type: none;
+  margin-bottom: 32px;
+}
+
+.definition_item {
+  margin-bottom: 16px;
+}
+
+.definition_item:last-child {
+  margin-bottom: 0;
+}
+
+.definition_header {
+  color: #292F38;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.18px;
+  font-weight: 500;
+  margin-bottom: 2px; 
+  display: block;
+}
+
+.definition_content {
+  color: #697586;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.18px;
+}
+
+.definition_list_points {
+  padding-left: 20px;
+}
+
+.terms_para {
+  color: #697586;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.18px;
+}
+
+
+@media (max-width: 540px) {
+  .wrapper {
+    max-width: unset;
+    padding: 0 24px;
+  }
+
+  .common_header {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 30px;
+  }
+
+  .common_para {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.16px;
+    margin-bottom: 16px;
+  }
+
+  .definition_header {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.16px;
+    margin-bottom: 2px;
+  }
+
+  .definition_content {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.16px;
+  }
+
+  .definition_list {
+    margin-bottom: 16px;
+  }
+
+  .terms_para {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.16px;
+  }
+}

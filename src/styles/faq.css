@@ -1,0 +1,87 @@
+.faq_container {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.faq_header {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #000;
+    font-weight: 500;
+}
+
+.accordian_header {
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    color: #292F38;
+    cursor: pointer;
+    max-width: 92%;
+}
+
+.accordian_para {
+    color: #697586;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    max-width: 95%;
+}
+
+.accordian_content {
+    position: relative;
+}
+
+.accordian_button {
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.accordian_content::after {
+    content: '';
+    display: block;
+    height: 0.5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.20);
+    margin: 32px 0;
+}
+
+.accordian_content:last-child::after {
+    display: none;
+}
+
+@media (max-width: 540px) {
+    .faq_container {
+        padding: 64px 0;
+    }
+
+    .faq_header {
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    .accordian_header {
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.18px;
+    }    
+    .accordian_para {
+        margin-top: 8px;
+        color: #697586;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.18px;
+    }
+
+    .accordian_content:first-child, .accordian_content:last-child {
+        margin-top: 0;
+    }
+
+    .accordian_content::after {
+        margin: 24px 0;
+    }
+    
+}

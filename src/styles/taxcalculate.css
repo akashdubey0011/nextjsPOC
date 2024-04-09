@@ -1,0 +1,330 @@
+.regime_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: nowrap;
+}
+
+.tax_calculated_section {
+    padding: 80px 0 0;
+    background: #f8f8f8;
+    position: relative;
+    z-index: 1;
+}
+
+.tax_calculate_header {
+    font-size: 40px;
+    font-family: 'league_spartan';
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.tax_calculate_para {
+    color: #697586;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    font-family: 'league_spartan';
+    margin-bottom: 48px;
+}
+
+.regime_item {
+    background: #fff;
+    padding: 32px;
+    height: 532px;
+    border-radius: 24px;
+    border: 1px solid rgba(0,0,0,0.05);
+    flex-basis: 50%;
+}
+
+.regime_header {
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+    line-height: 36px;
+    font-family: 'league_spartan';
+    margin-bottom: 16px;
+}
+
+.regime_content p.regime_content_para, .regime_content_slabs li {
+    font-size: 18px;
+    color: #525252;
+    line-height: 28px;
+    font-family: 'league_spartan';
+    opacity: 0.7;
+}
+
+.regime_content_slabs {
+    margin-bottom: 12px;
+    padding-left: 24px;
+}
+
+.choosing_regimes {
+    padding: 64px 0;
+}
+
+.choosing_regime_para {
+    font-family: 'league_spartan';
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    color: #697586;
+    margin-bottom: 12px;
+}
+
+.choosing_regime_para:last-child {
+    margin-bottom: 0;
+}
+
+/* .tax_calculated_section::after {
+    content: '';
+    width: 100%;
+    height: 78px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('../../public/asset/images/Divider.svg') no-repeat;
+    background-size: 100%;
+} */
+
+.tax_income_calculated_section::before {
+    content: "";
+    position: absolute;
+    height: 112px;
+    left: -31px;
+    right: -31px;
+    border-radius: 50%;
+    top: -46px;
+    background: #f8f8f8;
+    width: 104%;
+}
+
+
+.tax_income_calculated_section::after {
+    content: "";
+    position: absolute;
+    max-height: 100%;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    top: 72px;
+    background: url('../../public/asset/images/tax_income_bg.svg') no-repeat center;
+    width: 100%;
+    background-size: 100%;
+    z-index: 0;
+}
+
+
+
+.tax_income_calculated_section {
+    position: relative;
+    background-color: #1a1a1a;
+    padding: 145px 0 64px;
+}
+
+.tax_income_header, .tax_income_pills {
+    z-index: 1;
+    position: relative;
+}
+
+.tax_income_header {
+    color: #fff;
+    margin-bottom: 84px;
+    position: relative;
+}
+
+.tax_income_header h4 {
+    color: rgba(255,255,255,0.95);
+    font-family: 'league_spartan';
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tax_income_header h4::after {
+    content: '';
+    background: url('../../public/asset/images/tax_icon.svg');
+    width: 32px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: -26px;
+    right: -8px;
+}
+
+.tax_income_header p {
+    color: rgba(255,255,255,0.80);
+    font-size: 18px;
+    font-family: 'league_spartan';
+    line-height: 28px;
+}
+
+.tax_income_pills {
+    color: #fff;
+    padding: 32px;
+    background: #2c2d2c;
+    border-radius: 24px;
+    margin-bottom: 24px;
+}
+
+.tax_income_pills:last-child {
+    margin-bottom: 0;
+}
+
+.tax_income_pills p {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.tax_income_list {
+    font-size: 16px;
+    opacity: 0.7;
+    line-height: 28px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.tax_return {
+    padding: 64px 0 68px;
+}
+
+@media (max-width: 540px) {
+    .tax_calculated_section {
+        padding: 64px 0;
+        background: #f8f8f8;
+        position: relative;
+    }
+
+    .tax_calculate_header {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        line-height: 30px;
+    }
+
+    .tax_calculate_para {
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.18px;
+        margin-bottom: 24px;
+    }
+
+    .tax_income_calculated_section::after {
+        content: "";
+        position: absolute;
+        max-height: 100%;
+        min-height: 100%;
+        height: 100%;
+        /* display: block; */
+        left: 0;
+        right: 0;
+        top: -90px;
+        transform: rotate(0);
+        background: url('../../public/asset/images/tax_income_bg.svg') no-repeat center;
+        width: 100%;
+        background-size: 150% 100%;
+        /* z-index: 0; */
+    }
+
+    .regime_container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .regime_item {
+        padding: 24px;
+        height: auto;
+    }
+
+    .regime_header {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .regime_content p.regime_content_para, .regime_content_slabs li {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 12px;
+    }
+
+    .regime_content_para:last-child {
+        margin-bottom: 0;
+    }
+
+    .choosing_regimes {
+        padding: 64px 0 0;
+    }
+
+    .choosing_regime_para {
+        font-family: 'league_spartan';
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.18px;
+        margin-bottom: 12px;
+    }
+
+    .tax_calculated_section {
+        padding: 64px 0 20px;
+        background: #f8f8f8;
+        position: relative;
+    }
+
+    .tax_income_calculated_section {
+        padding: 110px 0 40px;
+    }
+
+    .tax_income_calculated_section::before {
+        content: "";
+        position: absolute;
+        height: 112px;
+        left: -11px;
+        right: 0;
+        border-radius: 50%;
+        top: -46px;
+        background: #f8f8f8;
+        width: 105%;
+    }
+
+    .tax_income_header {
+        margin-top: 40px;
+    }
+
+    .tax_income_header h4 {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        max-width: 327px;
+    }
+
+    .tax_income_header h4::after {
+        content: '';
+        background: url('../../public/asset/images/tax_icon.svg');
+        width: 32px;
+        height: 30px;
+        display: inline-block;
+        position: relative;
+        top: -52px;
+        right: -133px;
+    }
+
+    .tax_income_pills p {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .tax_income_list {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .tax_return {
+        padding: 52px 0;
+    }
+
+}
